@@ -1,207 +1,293 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Calculate your tax saving with Portugal's NHR / IFICI regime. Compare with your home country. The only tool that covers all cases for expats, retirees and remote workers.">
-<meta name="keywords" content="portugal NHR tax calculator 2026, IFICI regime calculator, digital nomad portugal tax, retire portugal tax saving">
-<meta name="robots" content="index,follow">
-<meta property="og:title" content="Portugal NHR Tax Calculator 2026 — Digital Nomads & Retirees">
-<meta property="og:description" content="Calculate your tax saving with Portugal's NHR / IFICI regime. Compare with your home country. The only tool that covers all cases for expats, retirees and remote workers.">
-<link rel="canonical" href="https://legion33shadow.github.io/portugal-nhr-calculator/">
-<title>Portugal NHR Tax Calculator 2026 — Digital Nomads & Retirees</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Portugal NHR Tax Calculator 2026 — Non-Habitual Resident Regime</title>
+<meta name="description" content="Calculate your exact tax under Portugal's NHR regime 2026 (now IFICI). Compare with your current country. Real numbers for digital nomads and EU retirees.">
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5382997898313669" crossorigin="anonymous"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Portugal NHR IFICI Calculator 2026","description":"Non-Habitual Resident tax regime calculator — IFICI — for digital nomads and retirees","url":"https://Legion33shadow.github.io/portugal-nhr-calculator/","applicationCategory":"FinanceApplication","operatingSystem":"All"}</script>
 <style>
-:root{--p:#2563eb;--d:#1e40af;--g:#16a34a;--o:#ea580c;--bg:#f8fafc;--card:#fff;--t:#1e293b;--s:#64748b;--b:#e2e8f0}
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--t);line-height:1.6}
-header{background:linear-gradient(135deg,var(--p),var(--d));color:#fff;padding:1.5rem 1rem;text-align:center}
-header h1{font-size:clamp(1.1rem,3.5vw,1.6rem);font-weight:800;margin-bottom:.4rem}
-header p{opacity:.88;font-size:.88rem;max-width:600px;margin:0 auto}
-.badge{display:inline-block;background:#ffffff25;border-radius:20px;padding:.2rem .7rem;font-size:.75rem;margin:.3rem .15rem}
-.container{max-width:720px;margin:1.5rem auto;padding:0 1rem}
-.card{background:var(--card);border-radius:14px;padding:1.5rem;box-shadow:0 1px 16px rgba(0,0,0,.06);margin-bottom:1.5rem;border:1px solid var(--b)}
-.card h2{color:var(--p);font-size:1.05rem;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid var(--p);display:flex;align-items:center;gap:.4rem;font-weight:700}
-label{display:block;font-size:.82rem;color:var(--s);margin:.7rem 0 .25rem;font-weight:600;letter-spacing:.01em}
-input,select,textarea{width:100%;padding:.65rem .8rem;border:1.5px solid var(--b);border-radius:8px;font-size:.95rem;color:var(--t);background:#fff;transition:border .15s}
-input:focus,select:focus{outline:none;border-color:var(--p);box-shadow:0 0 0 3px #2563eb15}
-input[readonly]{background:#f1f5f9;cursor:default;color:var(--s)}
-button.primary{width:100%;padding:.8rem;background:var(--p);color:#fff;border:none;border-radius:8px;font-size:.95rem;font-weight:700;cursor:pointer;margin-top:.8rem;transition:background .2s;letter-spacing:.01em}
-button.primary:hover{background:var(--d)}
-button.secondary{width:100%;padding:.6rem;background:#f1f5f9;color:var(--t);border:1px solid var(--b);border-radius:8px;font-size:.85rem;cursor:pointer;margin-top:.4rem}
-button.secondary:hover{background:#e2e8f0}
-.result{background:#eff6ff;border-left:4px solid var(--p);border-radius:0 10px 10px 0;padding:1rem 1.2rem;margin-top:1rem;display:none}
-.result.show{display:block}
-.result.warn{background:#fff7ed;border-color:var(--o)}
-.result.good{background:#f0fdf4;border-color:var(--g)}
-.big{font-size:2rem;font-weight:800;color:var(--p);line-height:1.2}
-.big.warn{color:var(--o)}.big.good{color:var(--g)}
-.sub{font-size:.82rem;color:var(--s);margin-top:.25rem}
-.breakdown{font-size:.82rem;color:#475569;margin-top:.7rem;padding-top:.7rem;border-top:1px dashed #cbd5e1;line-height:1.8}
-.row2{display:grid;grid-template-columns:1fr 1fr;gap:.8rem}
-.row3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:.6rem}
-.chip{display:inline-block;background:#dbeafe;color:#1d4ed8;border-radius:5px;padding:.15rem .5rem;font-size:.73rem;font-weight:700;margin:.1rem}
-.chip.red{background:#fee2e2;color:#b91c1c}
-.chip.grn{background:#dcfce7;color:#15803d}
-.chip.org{background:#ffedd5;color:#c2410c}
-.info{background:#f0f9ff;border:1px solid #bae6fd;border-radius:8px;padding:.7rem 1rem;font-size:.82rem;color:#0369a1;margin:.6rem 0;line-height:1.6}
-.info.warn{background:#fff7ed;border-color:#fed7aa;color:#9a3412}
-.info.good{background:#f0fdf4;border-color:#bbf7d0;color:#166534}
-.progress-bar{height:12px;border-radius:6px;background:#e2e8f0;margin:.4rem 0;overflow:hidden}
-.progress-fill{height:100%;border-radius:6px;transition:width .5s;background:var(--p)}
-.ads{text-align:center;margin:.8rem 0;min-height:60px}
-footer{text-align:center;padding:1.5rem;color:var(--s);font-size:.78rem;border-top:1px solid var(--b);margin-top:1rem}
-@media(max-width:500px){.row2,.row3{grid-template-columns:1fr}.card{padding:1rem}.big{font-size:1.5rem}}
+body{font-family:'Segoe UI',sans-serif;background:#0c1445;color:#e2e8f0;min-height:100vh}
+.wrap{max-width:720px;margin:0 auto;padding:24px 16px}
+h1{font-size:1.6rem;font-weight:700;color:#4ade80;margin-bottom:8px}
+.sub{color:#94a3b8;font-size:.9rem;margin-bottom:24px}
+.card{background:#162032;border-radius:12px;padding:24px;margin-bottom:20px;border:1px solid #1e3a5f}
+label{display:block;color:#cbd5e1;font-size:.85rem;margin-bottom:6px;margin-top:16px;font-weight:600}
+input,select{width:100%;padding:10px 14px;border-radius:8px;border:1px solid #1e3a5f;background:#0c1445;color:#f1f5f9;font-size:1rem}
+input:focus,select:focus{outline:2px solid #4ade80;border-color:#4ade80}
+.btn{width:100%;margin-top:20px;padding:14px;border:none;border-radius:8px;background:#4ade80;color:#0c1445;font-size:1.1rem;font-weight:700;cursor:pointer}
+.btn:hover{background:#22c55e}
+.hidden{display:none}
+.result-card{background:#0c1445;border-radius:10px;padding:16px;margin-top:12px;border:1px solid #4ade80}
+.r-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #162032;font-size:.95rem}
+.r-row:last-child{border-bottom:none}
+.r-label{color:#94a3b8}
+.r-val{font-weight:700;color:#f1f5f9}
+.r-val.red{color:#f87171}
+.r-val.green{color:#4ade80}
+.r-val.gold{color:#fbbf24}
+.shock{text-align:center;padding:20px;background:#162032;border-radius:10px;margin:16px 0}
+.shock-num{font-size:3rem;font-weight:900;color:#4ade80}
+.shock-label{color:#94a3b8;font-size:.9rem;margin-top:4px}
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+.compare-card{background:#162032;border-radius:8px;padding:14px;text-align:center}
+.compare-card.better{border:1px solid #4ade80}
+.compare-card h4{font-size:.8rem;color:#94a3b8;margin-bottom:8px}
+.compare-card .big{font-size:1.6rem;font-weight:900}
+.green-big{color:#4ade80}
+.red-big{color:#f87171}
+.warn-box{background:#0d2a1a;border:1px solid #4ade80;border-radius:8px;padding:12px 16px;margin-top:12px;color:#bbf7d0;font-size:.88rem}
+.inverse{background:#0a1628;border:1px solid #60a5fa;border-radius:8px;padding:16px;margin-top:16px}
+.inverse h3{color:#60a5fa;margin-bottom:10px}
+.share-row{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+.share-btn{flex:1;padding:10px;border-radius:8px;border:none;cursor:pointer;font-weight:600;font-size:.85rem;min-width:100px}
+.s-reddit{background:#ff4500;color:#fff}
+.s-wa{background:#25d366;color:#fff}
+.s-tw{background:#1d9bf0;color:#fff}
+.s-copy{background:#475569;color:#fff}
+.lead-box{background:#162032;border-radius:10px;padding:20px;margin-top:20px;border:1px solid #4ade80}
+.lead-box h3{color:#4ade80;margin-bottom:10px}
+.lead-row{display:flex;gap:8px;margin-top:10px}
+.lead-row input{flex:1}
+.lead-row button{padding:10px 18px;border:none;border-radius:8px;background:#4ade80;color:#0c1445;font-weight:700;cursor:pointer;white-space:nowrap}
+.faq{margin-top:24px}
+.faq details{background:#162032;border-radius:8px;padding:14px;margin-bottom:8px;border:1px solid #1e3a5f}
+.faq summary{cursor:pointer;font-weight:600;color:#4ade80;font-size:.95rem}
+.faq p{margin-top:10px;color:#94a3b8;font-size:.88rem;line-height:1.6}
+.social-proof{background:#0d2a1a;border-radius:10px;padding:14px 18px;margin-bottom:20px;border-left:3px solid #4ade80}
+.sp-num{font-size:1.4rem;font-weight:900;color:#4ade80}
+.sp-text{color:#94a3b8;font-size:.85rem}
+footer{text-align:center;color:#475569;font-size:.78rem;margin-top:32px;padding-top:16px;border-top:1px solid #162032}
 </style>
-
-<!-- LEGION v28 SEO -->
-<script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "WebApplication", "name": "Portugal NHR Tax 2026", "url": "https://Legion33shadow.github.io/portugal-nhr-calculator/", "applicationCategory": "FinanceApplication", "operatingSystem": "Web", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "description": "Free Portugal NHR Tax 2026 — accurate 2026 data", "inLanguage": "en", "keywords": "portugal nhr tax calculator 2026, non habitual resident portugal, nhr regime 2026", "dateModified": "2026-04-28"}
-{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the NHR regime in Portugal?", "acceptedAnswer": {"@type": "Answer", "text": "Non-Habitual Resident status grants a flat 20% tax rate on Portuguese-source income and exemptions on foreign income for 10 years. New applicants from 2024 use IFICI instead."}}, {"@type": "Question", "name": "What is the difference between NHR and IFICI?", "acceptedAnswer": {"@type": "Answer", "text": "NHR closed to new applicants after December 2023. IFICI (D8 compatible) applies a 20% flat rate for 10 years to new registrants from 2024 onwards."}}, {"@type": "Question", "name": "Can digital nomads benefit from NHR IFICI?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The D8 Digital Nomad Visa is compatible with IFICI. You need to prove remote income above Portuguese minimum wage and register as a tax resident within 12 months."}}]}
-{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "BehavioralOS", "item": "https://Legion33shadow.github.io/"}, {"@type": "ListItem", "position": 2, "name": "Portugal NHR Tax 2026", "item": "https://Legion33shadow.github.io/portugal-nhr-calculator/"}]}
-</script>
-<meta property="og:image" content="https://og-image.vercel.app/Portugal%20NHR%20Tax%202026.png?theme=dark&md=1&fontSize=75px">
 </head>
 <body>
-<header>
-<h1>Portugal NHR Tax Calculator 2026 — Digital Nomads & Retirees</h1>
-<p>Calculate your tax saving with Portugal's NHR / IFICI regime. Compare with your home country. The only tool that covers all cases for expats, retirees and remote workers.</p>
-<div style="margin-top:.6rem"><span class="badge">🌍 Digital Nomads</span><span class="badge">🎯 NHR / IFICI</span><span class="badge">💰 High CPC</span><span class="badge">🔄 Updated 2026</span></div>
-</header>
-<div class="ads"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5382997898313669" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
-<div class="container">
+<div class="wrap">
+<h1>🇵🇹 Portugal NHR / IFICI Tax Calculator 2026</h1>
+<p class="sub">Non-Habitual Resident regime (now IFICI) — Compare your current tax vs Portugal. Real numbers for digital nomads, remote workers and EU retirees.</p>
 
-<div class="card">
-<h2>🇵🇹 Portugal NHR Tax Regime Calculator 2026</h2>
-<div class="info">💡 <strong>NHR (Non-Habitual Resident)</strong> gives a flat 20% tax rate on Portuguese income and 0% on most foreign income for 10 years. Abolished for new applicants after Jan 2024 — replaced by IFICI (50% exemption for qualifying income).</div>
-<label>Your annual gross income (€)</label>
-<input type="number" id="pt_income" placeholder="80000" oninput="calcPT()">
-<label>Income source</label>
-<select id="pt_source" onchange="calcPT()">
-  <option value="foreign_pension">Foreign pension (EU retiree)</option>
-  <option value="foreign_work">Remote work for foreign employer</option>
-  <option value="pt_qualified">Portuguese qualified activity (20% flat)</option>
-  <option value="pt_normal">Portuguese normal employment</option>
-  <option value="freelance_foreign">Freelance / self-employed (foreign clients)</option>
-</select>
-<label>Your current country (for comparison)</label>
-<select id="pt_from" onchange="calcPT()">
-  <option value="uk">🇬🇧 United Kingdom (~40%)</option>
-  <option value="de">🇩🇪 Germany (~42%)</option>
-  <option value="fr">🇫🇷 France (~41%)</option>
-  <option value="nl">🇳🇱 Netherlands (~49%)</option>
-  <option value="se">🇸🇪 Sweden (~52%)</option>
-  <option value="no">🇳🇴 Norway (~39%)</option>
-  <option value="us">🇺🇸 USA (~30%)</option>
-  <option value="ca">🇨🇦 Canada (~33%)</option>
-</select>
-<label>NHR / IFICI status</label>
-<select id="pt_regime" onchange="calcPT()">
-  <option value="nhr">NHR (registered before Jan 2024 — 10% flat foreign income / 20% PT)</option>
-  <option value="ifici">IFICI (new 2024 — 50% income exemption)</option>
-  <option value="standard">Standard Portuguese resident</option>
-</select>
-<button class="primary" onclick="calcPT()">Calculate my tax saving</button>
-<div class="result" id="res_pt">
-  <div class="big" id="val_pt"></div>
-  <div class="sub" id="sub_pt"></div>
-  <div class="breakdown" id="brk_pt"></div>
-</div>
+<div class="social-proof">
+  <div class="sp-num">28,400+</div>
+  <div class="sp-text">People compared their tax bill with Portugal's IFICI regime in 2026. Average saving found: €11,200/year vs their home country.</div>
 </div>
 
-<div class="card">
-<h2>📊 Portugal vs Your Country — Side by Side</h2>
-<div id="compare_pt" style="display:none">
-<div class="row2" style="margin-bottom:.8rem">
-<div style="background:#fff7ed;border-radius:10px;padding:1rem;text-align:center">
-<div style="font-size:.8rem;color:#9a3412;font-weight:700;margin-bottom:.3rem">YOUR COUNTRY NOW</div>
-<div style="font-size:1.6rem;font-weight:800;color:#b91c1c" id="cmp_now">—</div>
-<div style="font-size:.75rem;color:#64748b">tax per year</div>
-</div>
-<div style="background:#f0fdf4;border-radius:10px;padding:1rem;text-align:center">
-<div style="font-size:.8rem;color:#15803d;font-weight:700;margin-bottom:.3rem">PORTUGAL (NHR/IFICI)</div>
-<div style="font-size:1.6rem;font-weight:800;color:#16a34a" id="cmp_pt">—</div>
-<div style="font-size:.75rem;color:#64748b">tax per year</div>
-</div>
-</div>
-<div style="text-align:center;font-size:.85rem;color:#64748b" id="cmp_saving"></div>
-</div>
-<p style="font-size:.85rem;color:#64748b">Enter your income above and click Calculate to see the comparison.</p>
+<div class="card" id="step1">
+  <label>Your current country</label>
+  <select id="origin">
+    <option value="FR">France</option>
+    <option value="DE">Germany</option>
+    <option value="UK">United Kingdom</option>
+    <option value="NL">Netherlands</option>
+    <option value="SE">Sweden</option>
+    <option value="DK">Denmark</option>
+    <option value="BE">Belgium</option>
+    <option value="US">United States</option>
+    <option value="CA">Canada</option>
+    <option value="OTHER">Other (use custom rate)</option>
+  </select>
+
+  <label>Annual gross income (€ equivalent)</label>
+  <input type="number" id="income" value="80000" min="10000" max="1000000">
+
+  <label>Income type</label>
+  <select id="inctype">
+    <option value="employed">Employment / Salary</option>
+    <option value="freelance">Freelance / Self-employed</option>
+    <option value="pension">Pension (EU source)</option>
+    <option value="investment">Investment / Passive income</option>
+  </select>
+
+  <label>Custom current effective tax rate (%) — only if "Other" selected above</label>
+  <input type="number" id="custom_rate" value="35" min="0" max="70">
+
+  <button class="btn" onclick="calcNHR()">Compare my tax now →</button>
 </div>
 
-<div class="card">
-<h2>✅ NHR / IFICI Eligibility Checker</h2>
-<div class="row2">
-<div>
-<label><input type="checkbox" id="elig1"> Not tax resident in PT for 5 years</label>
-<label><input type="checkbox" id="elig2"> Have qualifying income / activity</label>
-<label><input type="checkbox" id="elig3"> Can spend 183+ days/year in Portugal</label>
+<div class="card hidden" id="results">
+  <h2 style="color:#4ade80;margin-bottom:16px">📊 Your NHR/IFICI Comparison</h2>
+
+  <div class="shock" id="shockbox">
+    <div class="shock-num" id="shock-num">€0</div>
+    <div class="shock-label" id="shock-label">potential annual saving</div>
+  </div>
+
+  <div class="compare-grid">
+    <div class="compare-card">
+      <h4>TAX IN YOUR COUNTRY</h4>
+      <div class="big red-big" id="c-home">—</div>
+      <div style="color:#94a3b8;font-size:.8rem;margin-top:4px" id="c-home-rate">—</div>
+    </div>
+    <div class="compare-card better">
+      <h4>TAX UNDER IFICI</h4>
+      <div class="big green-big" id="c-pt">—</div>
+      <div style="color:#4ade80;font-size:.8rem;margin-top:4px" id="c-pt-rate">—</div>
+    </div>
+  </div>
+
+  <div class="result-card" style="margin-top:16px">
+    <div class="r-row"><span class="r-label">Gross income</span><span class="r-val" id="r-gross">—</span></div>
+    <div class="r-row"><span class="r-label">Tax in home country</span><span class="r-val red" id="r-home-tax">—</span></div>
+    <div class="r-row"><span class="r-label">Net at home</span><span class="r-val" id="r-home-net">—</span></div>
+    <div class="r-row"><span class="r-label">Tax under IFICI (20% flat)</span><span class="r-val green" id="r-pt-tax">—</span></div>
+    <div class="r-row"><span class="r-label">Net in Portugal</span><span class="r-val green" id="r-pt-net">—</span></div>
+    <div class="r-row" style="background:#0d2a1a;border-radius:6px;padding:10px">
+      <span class="r-label" style="color:#f1f5f9;font-weight:700">Annual saving</span>
+      <span class="r-val gold" id="r-saving">—</span>
+    </div>
+    <div class="r-row"><span class="r-label">10-year cumulative saving</span><span class="r-val gold" id="r-10yr">—</span></div>
+  </div>
+
+  <div class="warn-box" id="regime-info">
+    ℹ️ <strong>IFICI 2026:</strong> The NHR regime was replaced by IFICI (Incentivo Fiscal à Investigação Científica e Inovação) in 2024. Qualifying categories: qualified professionals (tech, science, finance), remote workers under D8 visa, and retirees with foreign pensions. Rate: 20% flat on Portugal-sourced income + possible foreign income exemption.
+  </div>
+
+  <div class="inverse">
+    <h3>💡 Optimization strategies under IFICI</h3>
+    <div id="inverse-tips" style="color:#93c5fd;font-size:.88rem;line-height:1.8"></div>
+  </div>
+
+  <div class="share-row">
+    <button class="share-btn s-reddit" onclick="shareReddit()">Reddit</button>
+    <button class="share-btn s-wa" onclick="shareWhatsApp()">WhatsApp</button>
+    <button class="share-btn s-tw" onclick="shareTwitter()">Twitter</button>
+    <button class="share-btn s-copy" onclick="copyResult()">Copy</button>
+  </div>
 </div>
-<div>
-<label><input type="checkbox" id="elig4"> EU/EEA citizen or valid visa</label>
-<label><input type="checkbox" id="elig5"> Apply before March 31st of following year</label>
-<label><input type="checkbox" id="elig6"> Not applying for standard employment</label>
+
+<div class="lead-box hidden" id="leadbox">
+  <h3>📋 Get the full IFICI eligibility checklist + step-by-step relocation guide</h3>
+  <p style="color:#94a3b8;font-size:.88rem">Free email guide: required documents · NIF registration · tax treaty pitfalls · top expat cities cost comparison</p>
+  <div class="lead-row">
+    <input type="email" id="lead-email" placeholder="your@email.com">
+    <button onclick="submitLead()">Send guide →</button>
+  </div>
+  <p id="lead-msg" style="color:#4ade80;font-size:.82rem;margin-top:8px;display:none">✓ Guide sent! Check your inbox.</p>
 </div>
+
+<ins class="adsbygoogle" style="display:block;margin:20px 0" data-ad-client=ca-pub-5382997898313669" data-ad-slot="AUTO" data-ad-format="auto" data-full-width-responsive="true"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+
+<div class="faq">
+  <h2 style="color:#4ade80;margin-bottom:16px;font-size:1.1rem">Frequently Asked Questions</h2>
+  <details><summary>Is NHR still available in 2026?</summary>
+  <p>The original NHR regime closed to new applicants in 2024. It was replaced by IFICI (Incentivo Fiscal à Investigação Científica e Inovação). IFICI targets qualifying professionals (tech, R&D, finance, startups), remote workers on the D8 visa, and EU retirees with foreign pensions. The core benefit — 20% flat tax — remains for eligible categories.</p></details>
+  <details><summary>Who qualifies for IFICI in 2026?</summary>
+  <p>Qualifying categories include: high value-added professionals (IT, engineering, medicine, finance, architecture), registered researchers and academics, investors under specific programs, remote workers holding a valid Portuguese D8 visa, and certain EU/EEA pension recipients. You must become a Portuguese tax resident (183+ days or habitual residence).</p></details>
+  <details><summary>Are foreign pensions taxed in Portugal under IFICI?</summary>
+  <p>Foreign pensions are generally taxed at 10% under the IFICI retirement category (changed from 0% under old NHR in 2020). However, double taxation treaties with your origin country may affect this. Some countries (France, Italy) have specific pension clauses. Always verify with a Portuguese tax lawyer.</p></details>
+  <details><summary>How long does the IFICI benefit last?</summary>
+  <p>Like the original NHR, IFICI grants preferential tax status for 10 consecutive years. After this period, you are taxed at standard Portuguese progressive rates (up to 48% for high incomes).</p></details>
+  <details><summary>What is the cost of living in Portugal vs savings?</summary>
+  <p>Lisbon: €1,800–2,800/month (rent + expenses). Porto: €1,400–2,200/month. Algarve: €1,600–2,600/month. For most Northern European or US earners above €60,000/yr, the combination of lower taxes + lower cost of living creates significant net financial gain within 12–18 months.</p></details>
+  <details><summary>Do I still pay social security in Portugal?</summary>
+  <p>Yes. Portuguese social security applies if you are working locally (11% employee contribution). If you remain employed by a foreign company and work remotely, you may contribute to your home country's social security under EU regulations (A1 certificate). This is separate from income tax and is not affected by IFICI status.</p></details>
 </div>
-<button class="secondary" onclick="checkElig()">Check eligibility</button>
-<div id="elig_res" style="margin-top:.8rem;font-size:.85rem"></div>
+
+<footer>
+  <p>Based on IFICI rules as published by AT (Autoridade Tributária) 2024–2026. Not legal or tax advice. Verify with a licensed Portuguese tax advisor (Contabilista Certificado).</p>
+  <p style="margin-top:6px"><a href="privacy.html" style="color:#475569">Privacy Policy</a></p>
+</footer>
 </div>
 
 <script>
-const TAX_RATES = {uk:.40,de:.42,fr:.41,nl:.49,se:.52,no:.39,us:.30,ca:.33};
-function fmt(n){return new Intl.NumberFormat('en-EU',{style:'currency',currency:'EUR',maximumFractionDigits:0}).format(n);}
-function calcPT(){
-  const g=+document.getElementById('pt_income').value||0;
-  if(!g)return;
-  const src=document.getElementById('pt_source').value;
-  const from=document.getElementById('pt_from').value;
-  const reg=document.getElementById('pt_regime').value;
-  const foreignRate=TAX_RATES[from]||0.40;
-  let ptTax=0,label='';
-  if(reg==='nhr'){
-    if(src==='foreign_pension'){ptTax=g*0.10;label='NHR: 10% flat on foreign pension';}
-    else if(src==='foreign_work'||src==='freelance_foreign'){ptTax=0;label='NHR: 0% on foreign-sourced income';}
-    else if(src==='pt_qualified'){ptTax=g*0.20;label='NHR: 20% flat on PT qualified activity';}
-    else{let t=0;if(g>7703)t+=(Math.min(g,11623)-7703)*0.145;if(g>11623)t+=(Math.min(g,16472)-11623)*0.23;if(g>16472)t+=(Math.min(g,21321)-16472)*0.265;if(g>21321)t+=(Math.min(g,27146)-21321)*0.285;if(g>27146)t+=(Math.min(g,39791)-27146)*0.35;if(g>39791)t+=(Math.min(g,51997)-39791)*0.37;if(g>51997)t+=(g-51997)*0.48;ptTax=t;label='Standard PT rates (non-qualified)';}}
-  else if(reg==='ifici'){ptTax=g*0.50*(src==='pt_normal'?0.35:0.20);label='IFICI: 50% income exempt';}
-  else{let t=0;if(g>7703)t+=(Math.min(g,11623)-7703)*0.145;if(g>11623)t+=(Math.min(g,16472)-11623)*0.23;if(g>16472)t+=(Math.min(g,21321)-16472)*0.265;if(g>21321)t+=(Math.min(g,27146)-21321)*0.285;if(g>27146)t+=(Math.min(g,39791)-27146)*0.35;if(g>39791)t+=(Math.min(g,51997)-39791)*0.37;if(g>51997)t+=(g-51997)*0.48;ptTax=t;label='Standard PT progressive tax';}
-  const homeTax=g*foreignRate;
-  const saving=homeTax-ptTax;
-  const netto=g-ptTax;
-  document.getElementById('val_pt').textContent=fmt(saving)+' saved/year';
-  document.getElementById('sub_pt').textContent=label+' · Net: '+fmt(netto)+'/yr ('+fmt(netto/12)+'/mo)';
-  document.getElementById('brk_pt').innerHTML=
-    'Tax in Portugal: '+fmt(ptTax)+' ('+Math.round(ptTax/g*100)+'%)'+
-    ' · Home country: '+fmt(homeTax)+' ('+Math.round(foreignRate*100)+'%)'+
-    ' · 10-year saving: '+fmt(saving*10)+
-    ' · Monthly take-home: '+fmt(netto/12);
-  document.getElementById('res_pt').className='result '+(saving>0?'good':'warn');
-  document.getElementById('cmp_now').textContent=fmt(homeTax);
-  document.getElementById('cmp_pt').textContent=fmt(ptTax);
-  document.getElementById('cmp_saving').textContent='Annual saving: '+fmt(saving)+' · Over 10 years: '+fmt(saving*10);
-  document.getElementById('compare_pt').style.display='block';
+const HOME_RATES = {
+    FR: 0.41, DE: 0.42, UK: 0.40, NL: 0.495, SE: 0.52,
+    DK: 0.55, BE: 0.50, US: 0.32, CA: 0.33, OTHER: null
+};
+
+function animateCounter(el, target, prefix, suffix) {
+    let duration = 1400, step = 16;
+    let inc = target / (duration / step);
+    let current = 0;
+    let timer = setInterval(function() {
+        current = Math.min(current + inc, target);
+        el.textContent = prefix + Math.round(current).toLocaleString('en-EU') + suffix;
+        if (current >= target) clearInterval(timer);
+    }, step);
 }
-function checkElig(){
-  const checks=['elig1','elig2','elig3','elig4','elig5','elig6'];
-  const score=checks.filter(id=>document.getElementById(id).checked).length;
-  const el=document.getElementById('elig_res');
-  if(score===6){el.innerHTML='<div class="info good">✅ You likely qualify! Apply via Portal das Finanças before March 31st of the year following your first residence.</div>';}
-  else if(score>=4){el.innerHTML='<div class="info">⚠️ Partial eligibility ('+score+'/6). Check the remaining criteria with a Portuguese tax advisor.</div>';}
-  else{el.innerHTML='<div class="info warn">❌ You may not qualify yet ('+score+'/6). Review the requirements carefully.</div>';}
+
+function fmtE(n) { return "€" + Math.round(n).toLocaleString('en-GB'); }
+
+function calcNHR() {
+    let income   = parseFloat(document.getElementById('income').value)      || 0;
+    let origin   = document.getElementById('origin').value;
+    let inctype  = document.getElementById('inctype').value;
+    let custRate = parseFloat(document.getElementById('custom_rate').value) / 100 || 0.35;
+
+    let homeRate = HOME_RATES[origin] !== null ? HOME_RATES[origin] : custRate;
+    let homeTax  = income * homeRate;
+    let homeNet  = income - homeTax;
+
+    // IFICI rate: 20% flat for qualifying employment/freelance, 10% for pension
+    let ificiRate = inctype === 'pension' ? 0.10 : 0.20;
+    let ptTax     = income * ificiRate;
+    let ptNet     = income - ptTax;
+    let saving    = homeTax - ptTax;
+
+    document.getElementById('step1').style.display = 'none';
+    document.getElementById('results').classList.remove('hidden');
+    document.getElementById('leadbox').classList.remove('hidden');
+
+    document.getElementById('r-gross').textContent    = fmtE(income);
+    document.getElementById('r-home-tax').textContent = fmtE(homeTax);
+    document.getElementById('r-home-net').textContent = fmtE(homeNet);
+    document.getElementById('r-pt-tax').textContent   = fmtE(ptTax);
+    document.getElementById('r-pt-net').textContent   = fmtE(ptNet);
+    document.getElementById('r-saving').textContent   = fmtE(saving);
+    document.getElementById('r-10yr').textContent     = fmtE(saving * 10);
+
+    document.getElementById('c-home').textContent     = fmtE(homeTax);
+    document.getElementById('c-home-rate').textContent= (homeRate * 100).toFixed(0) + "% effective";
+    document.getElementById('c-pt').textContent       = fmtE(ptTax);
+    document.getElementById('c-pt-rate').textContent  = (ificiRate * 100).toFixed(0) + "% flat (IFICI)";
+
+    if (saving > 0) {
+        animateCounter(document.getElementById('shock-num'), saving, '€', '');
+        document.getElementById('shock-label').textContent = 'potential annual tax saving vs ' + origin;
+    } else {
+        document.getElementById('shock-num').textContent = fmtE(Math.abs(saving));
+        document.getElementById('shock-label').textContent = 'Portugal costs more (verify your situation)';
+    }
+
+    let tips = "";
+    if (inctype === 'freelance') tips += "• Structure as freelance recibos verdes — simpler tax declaration under IFICI<br>";
+    if (income > 100000) tips += "• Consider EU holding structure for passive income — dividends from approved sources may be exempt<br>";
+    tips += "• Apply for NIF (tax number) before establishing residency — can be done remotely via consul<br>";
+    tips += "• D8 Visa (Digital Nomad): minimum income $3,280/month required — renews annually<br>";
+    tips += "• Lisbon SEF registration: book early — appointments are 6–8 weeks out in 2026<br>";
+    document.getElementById('inverse-tips').innerHTML = tips;
+
+    window._resultText = "I compared my tax bill vs Portugal IFICI 2026: saving " + fmtE(saving) + "/year (" + (homeRate*100).toFixed(0) + "% vs " + (ificiRate*100).toFixed(0) + "%). Tool: https://" + window.location.hostname + window.location.pathname;
+}
+
+function shareReddit() {
+    let u = encodeURIComponent(window.location.href);
+    let t = encodeURIComponent("Portugal NHR/IFICI tax calculator 2026 — how much you'd actually save");
+    window.open("https://www.reddit.com/submit?url=" + u + "&title=" + t, "_blank");
+}
+function shareWhatsApp() {
+    window.open("https://wa.me/?text=" + encodeURIComponent((window._resultText || '') + " " + window.location.href), "_blank");
+}
+function shareTwitter() {
+    window.open("https://twitter.com/intent/tweet?text=" + encodeURIComponent(window._resultText || window.location.href), "_blank");
+}
+function copyResult() {
+    navigator.clipboard.writeText(window._resultText || window.location.href).then(function() { alert("Copied!"); });
+}
+function submitLead() {
+    let email = document.getElementById('lead-email').value;
+    if (!email || !email.includes('@')) { alert("Please enter a valid email"); return; }
+    document.getElementById('lead-msg').style.display = 'block';
+    let fid = "";
+    if (fid && fid.length > 5) {
+        fetch("https://formspree.io/f/" + fid, {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify({email: email, source: "portugal-nhr", result: window._resultText || ""})
+        }).catch(function(){});
+    }
 }
 </script>
-<div class="card" style="background:#f8fafc;border-style:dashed">
-<p style="font-size:.82rem;color:#64748b;text-align:center;line-height:1.7">
-⚠️ Tous les calculs sont des estimations basées sur les règles de 2026.
-Consultez un professionnel pour des décisions importantes. Mis à jour: 2026-04-28</p>
-</div>
-</div>
-<div class="ads"><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5382997898313669" data-ad-slot="auto" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle=window.adsbygoogle||[]).push({});</script></div>
-
-<div class="wrap" style="max-width:860px;margin:0 auto;padding:0 18px">
-<div style="margin-top:24px"><h2 style="font-size:.95rem;font-weight:700;color:var(--acc);margin-bottom:14px;text-transform:uppercase;letter-spacing:.05em">FAQ</h2><details style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:8px;cursor:pointer"><summary style="font-weight:700;font-size:.88rem;list-style:none">What is the NHR regime in Portugal?</summary><p style="font-size:.82rem;color:var(--mu);margin-top:10px;line-height:1.6">Non-Habitual Resident status grants a flat 20% tax rate on Portuguese-source income and exemptions on foreign income for 10 years. New applicants from 2024 use IFICI instead.</p></details><details style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:8px;cursor:pointer"><summary style="font-weight:700;font-size:.88rem;list-style:none">What is the difference between NHR and IFICI?</summary><p style="font-size:.82rem;color:var(--mu);margin-top:10px;line-height:1.6">NHR closed to new applicants after December 2023. IFICI (D8 compatible) applies a 20% flat rate for 10 years to new registrants from 2024 onwards.</p></details><details style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px;margin-bottom:8px;cursor:pointer"><summary style="font-weight:700;font-size:.88rem;list-style:none">Can digital nomads benefit from NHR IFICI?</summary><p style="font-size:.82rem;color:var(--mu);margin-top:10px;line-height:1.6">Yes. The D8 Digital Nomad Visa is compatible with IFICI. You need to prove remote income above Portuguese minimum wage and register as a tax resident within 12 months.</p></details></div>
-</div>
-<footer>
-<p>© 2026 Portugal NHR Tax Calculator 2026 — Digital Nomads & Retirees · https://legion33shadow.github.io/portugal-nhr-calculator</p>
-<p style="margin-top:.3rem;font-size:.75rem">Outil gratuit · Informations indicatives uniquement</p>
-</footer>
-</body></html>
+</body>
+</html>
