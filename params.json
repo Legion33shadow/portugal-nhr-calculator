@@ -1,0 +1,16 @@
+{
+  "slug": "portugal-nhr-calculator",
+  "country": "PT",
+  "domain": "tax",
+  "law_reference": "C\u00f3digo do IRS - Regime Transit\u00f3rio RNH / Incentivo Fiscal \u00e0 Investiga\u00e7\u00e3o Cient\u00edfica",
+  "sources": [
+    "https://www.portaldasfinancas.gov.pt"
+  ],
+  "sources_health": {
+    "https://www.portaldasfinancas.gov.pt": {
+      "status": 200,
+      "reachable": true
+    }
+  },
+  "signature_payload": "682ba17689262751379f4b0b0442fa36cb0b9795a627b021fae7e998dbbbdc45"
+}
