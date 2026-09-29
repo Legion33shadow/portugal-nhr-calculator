@@ -1,0 +1,13 @@
+{
+  "slug": "portugal-nhr-calculator",
+  "type": "calculator",
+  "country": "PT",
+  "category": "tax",
+  "official_sources": [
+    "https://info.portaldasfinancas.gov.pt/",
+    "https://eportugal.gov.pt/"
+  ],
+  "claim_state": "method_unverified",
+  "phoenix_ready": false,
+  "limitations": "Portugal NHR rules have changed; verify year and eligibility."
+}
